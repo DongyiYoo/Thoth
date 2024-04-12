@@ -622,3 +622,47 @@ SEARCH
 	}
 
 }
+
+/*
+------------------
+---PROFIE PAGE----
+------------------
+*/
+
+.profile-container {
+    align-items: flex-start;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    margin-top: 80px;
+}
+
+.profile-left{
+    width: 600px;
+
+}
+.profile-right {
+    flex: 1 1 auto;
+    margin-top: 50px;
+}
+
+.profile-icon {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.username {
+    font-size: 24px; 
+    font-weight: bold;
+    margin-top: 20px; 
+    text-align: center; 
+}
+
+.fullname,
+.email {
+    margin-top: 5px;
+    text-align: left; 
+}
+

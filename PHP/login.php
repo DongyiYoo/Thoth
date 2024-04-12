@@ -33,9 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query = "SELECT * FROM login WHERE username = '$username' AND password = '$password'";
         $result = $conn->query($query);
 
-        if ($result->num_rows > 0) {
+         if ($result->num_rows > 0) {
             // Credentials match, log in
+            $user = $result->fetch_assoc();
             $_SESSION["loggIn"] = true;
+            $_SESSION["username"] = $user['username'];
+            $_SESSION["fullName"] = $user['fullName'];  
+            $_SESSION["email"] = $user['email'];       
             header('Location: /library.html');
             exit();
             // Perform additional actions for successful login

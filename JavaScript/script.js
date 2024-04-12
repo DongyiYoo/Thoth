@@ -261,6 +261,23 @@ function contactForm() {
 
 /*
 ------------------------------
+----------PROFILE-------------
+------------------------------
+*/
+function displayUserInfo() {
+    if (userInfo) {
+        document.querySelector('.username').textContent += userInfo.username;
+        document.querySelector('.fullname').textContent += userInfo.fullName;
+        document.querySelector('.email').textContent += userInfo.email;
+    }
+}
+
+window.onload = displayUserInfo; 
+
+
+
+/*
+------------------------------
 ----------REFERENCES----------
 ------------------------------
 

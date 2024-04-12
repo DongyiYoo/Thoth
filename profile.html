@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="CSS/styles.css"/>
-    <title>Library Page</title>
+    <title>Thoth</title>
+    <link href="CSS/styles.css" rel="stylesheet" type="text/css"/>
 </head>
-<body onload="loadLibrary()">
+<body>
 <!-- Navigation bar section -->
 <div class="TopNav">
     <!-- Navigation links -->
@@ -20,7 +19,7 @@
             <img src="Images/user.png" alt="User" style="vertical-align: middle;">
         </button>
 
-        <!-- Dropdown content hidden by default shown on click -->
+       <!-- Dropdown content hidden by default shown on click -->
         <div class="DropdownContent" id="DropdownContent">
             <a href="profile.html">My Profile</a>
             <a href="library.html">My Library</a>
@@ -41,21 +40,31 @@
     <a class="link" href="search.html">Search</a>
 </div>
 
+
 <h1 class="heading">My Profile</h1>
 
-<div class="">
-    <div class="">
-     <p class=""><img src="images/user.png" class="profile-icon" alt="user"></p>
+    <!-- Profile info goes here -->
+<div class="profile-container">
+    <div class="profile-left">
+        <img src="images/user.png" class="profile-icon" alt="user">
+        <p class="username">Username: </p>
     </div>
-     <p><i class=""></i>Username: </p>
-     <p><i class=""></i> Full Name: </p>
-     <p><i class=""></i> Email:  </p>
-    
-  </div>
-  <br>
-
+    <div class="profile-right">
+        <p class="fullname">Full Name: </p>
+        <p class="email">Email: </p> 
+    </div>
+</div>
 
 <script src="JavaScript/script.js"></script>
+
+<script>
+    var userInfo = {
+        username: '<?php echo $_SESSION["username"] ?? "Guest"; ?>',
+        fullName: '<?php echo $_SESSION["fullName"] ?? "Full Name"; ?>',
+        email: '<?php echo $_SESSION["email"] ?? "Email"; ?>'
+    };
+</script>
+
 
 </body>
 </html>
